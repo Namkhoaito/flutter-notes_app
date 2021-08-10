@@ -106,68 +106,50 @@ class CreatNotesPage extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(25)),
-                  ),
-                  child: Column(
-                    children: [
-                      TextFormField(
-                        controller: _creatNotesController.txtTitle,
-                        decoration: InputDecoration(
-                          contentPadding:
-                              EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                          border: InputBorder.none,
-                          hintText: 'Tiêu đề',
-                          hintStyle: TextStyle(
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey[400]),
-                        ),
-                        style: TextStyle(
-                            fontSize: 23, fontWeight: FontWeight.bold),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+                ),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      controller: _creatNotesController.txtTitle,
+                      decoration: InputDecoration(
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                        border: InputBorder.none,
+                        hintText: 'Tiêu đề',
+                        hintStyle: TextStyle(
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey[400]),
                       ),
-                      // Expanded(
-                      //   child: TextFormField(
-                      //     controller: _creatNotesController.txtContent,
-                      //     decoration: InputDecoration(
-                      //       contentPadding: EdgeInsets.symmetric(
-                      //           horizontal: 20, vertical: 5),
-                      //       border: InputBorder.none,
-                      //       hintText: 'Nội dung',
-                      //       hintStyle: TextStyle(
-                      //           fontSize: 20, color: Colors.grey[400]),
-                      //     ),
-                      //     maxLines: 99999999999,
-                      //     style: TextStyle(fontSize: 20),
-                      //   ),
-                      // ),
-
-                      ToolbarWidget(
-                        controller: _creatNotesController.controller,
-                        htmlToolbarOptions: HtmlToolbarOptions(
-                          toolbarPosition: ToolbarPosition
-                              .custom, //required to place toolbar anywhere!
-                          //other options
-                        ),
+                      style:
+                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                    ),
+                    ToolbarWidget(
+                      controller: _creatNotesController.controller,
+                      htmlToolbarOptions: HtmlToolbarOptions(
+                        toolbarPosition: ToolbarPosition
+                            .custom, //required to place toolbar anywhere!
+                        //other options
                       ),
-                      HtmlEditor(
-                        controller: _creatNotesController.controller, //required
-                        htmlEditorOptions: HtmlEditorOptions(
-                          hint: "Your text here...",
-                          //initalText: "text content initial, if any",
-                        ),
-                        otherOptions: OtherOptions(
-                          height: 400,
-                        ),
+                    ),
+                    HtmlEditor(
+                      controller: _creatNotesController.controller, //required
+                      htmlEditorOptions: HtmlEditorOptions(
+                        hint: "Your text here...",
+                        //initalText: "text content initial, if any",
                       ),
-                      Text(_creatNotesController.controller
-                          .getText()
-                          .toString()),
-                    ],
-                  )),
-            )
+                      otherOptions: OtherOptions(
+                        height: 400,
+                      ),
+                    ),
+                    Text(_creatNotesController.controller.getText().toString()),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
         color: Colors.grey[200],

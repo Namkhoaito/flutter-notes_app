@@ -9,15 +9,17 @@ class LoginPage extends StatelessWidget {
     LoginController _loginController = Get.find<LoginController>();
     return Scaffold(
       body: Center(
-          child: Container(
-              height: 45,
-              child: SignInButton(
-                Buttons.Google,
-                onPressed: _loginController.loginGoogle,
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-              ))),
+        child: Container(
+          height: 45,
+          child: SignInButton(
+            Buttons.Google,
+            onPressed: _loginController.loginGoogle,
+            elevation: 5,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+        ),
+      ),
     );
   }
 }

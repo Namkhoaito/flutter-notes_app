@@ -28,11 +28,12 @@ class HomePage extends StatelessWidget {
             onPressed: _homeController.updateOnline,
           ),
           IconButton(
-              onPressed: _homeController.logOut,
-              icon: Icon(
-                Icons.logout,
-                color: Colors.grey[800],
-              ))
+            onPressed: _homeController.logOut,
+            icon: Icon(
+              Icons.logout,
+              color: Colors.grey[800],
+            ),
+          )
         ],
       ),
       body: Container(
