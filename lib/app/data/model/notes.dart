@@ -23,3 +23,5 @@ class Notes {
         'dateTime': dateTime.toString(),
       };
 }
+
+class required {}
